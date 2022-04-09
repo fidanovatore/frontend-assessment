@@ -1,38 +1,326 @@
-.App {
-  text-align: center;
+/* poppins fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* reset css */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  line-height: 1;
+  font-family: 'Poppins',
+    sans-serif;
+  background-color: #F8F9FB;
+  padding-block: 36px;
+  letter-spacing: 0.03em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+
+/* colors */
+.black-text {
+  color: #000;
+}
+
+.grey-text {
+  color: #646464;
+}
+
+.blue-text {
+  color: #6590FF;
+}
+
+.red-text {
+  color: #E33E38;
+}
+
+/* font-weights */
+.bold-font {
+  font-weight: 700;
+}
+
+.light-font {
+  font-weight: 300;
+}
+
+.md-font {
+  font-weight: 500;
+}
+
+/* font-sizes */
+.lg-text {
+  font-size: 20px;
+}
+
+.md-text {
+  font-size: 14px;
+}
+
+.sm-text {
+  font-size: 12px;
+}
+
+/* comment section Css*/
+.comment-section {
+  width: 656px;
+  margin-inline: auto;
+}
+
+/* comment card  */
+.comment-card {
+  background: #FFFFFF;
+  box-shadow: 0px 6px 20px rgb(140 151 164 / 20%);
+  margin: 13px 0px;
+  padding: 12px;
   display: flex;
-  flex-direction: column;
+  gap: 12px;
+}
+
+.comment-text p {
+  padding-block: 8px;
+  line-height: 20px;
+}
+
+.comment-reaction {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 30px;
+  padding-top: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.comment-like {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.comment-like:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #646464;
+  right: -17px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.comment-text h3 span{
+  background: rgba(131, 68, 219, 0.1);
+  border-radius: 3px;
+  padding: 1px 5px;
+  margin-left: 6px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #8344DB;
+}
+
+.write-comment {
+  background: #F8F9FB;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.write-comment input {
+  border: 0;
+  background: transparent;
+  width: 100%;
+  padding-right: 12px;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+::-ms-placeholder,
+::placeholder {
+  color: #646464 !important;
+  letter-spacing: 0.03em !important;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  font-family: 'Poppins' ,sans-serif !important;
+}
+
+input:focus-visible {
+  outline: none;
+}
+.comment-card.extra-css {
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 30px;
+  margin-top: 20px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* media query for mobile responsiveness */
+/* @media screen(max-width: "656px"){
+
+} */
+@media screen and (max-width: 700px) {
+  .comment-section{
+    width: 90%;
   }
 }
